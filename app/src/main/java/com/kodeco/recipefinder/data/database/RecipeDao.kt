@@ -14,10 +14,10 @@ interface RecipeDao {
     suspend fun addRecipe(recipe: RecipeDb)
 
     @Query("SELECT * FROM recipes WHERE id = :id")
-    fun findRecipeById(id: Int): RecipeDb
+    suspend fun findRecipeById(id: Int): RecipeDb
 
     @Query("SELECT * FROM recipes")
-    fun getAllRecipes(): List<RecipeDb>
+    suspend fun getAllRecipes(): List<RecipeDb>
 
     @Update
     suspend fun updateRecipeDetails(recipe: RecipeDb)
@@ -26,6 +26,6 @@ interface RecipeDao {
     suspend fun deleteRecipe(recipe: RecipeDb)
 
     @Query("DELETE FROM recipes WHERE id = :recipeId")
-    fun deleteRecipeById(recipeId: Long)
+    suspend fun deleteRecipeById(recipeId: Long)
 
 }

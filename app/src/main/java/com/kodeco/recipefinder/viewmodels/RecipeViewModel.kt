@@ -83,11 +83,7 @@ class RecipeViewModel(private val prefs: Prefs) : ViewModel() {
         viewModelScope.launch {
             try {
                 val response = spoonacularService.queryRecipes(query, offset, number)
-//                Timber.e("Loaded Offset:$offset Num Items: ${response.recipes.size} out of ${response.totalResults}")
                 _recipeListState.value = _recipeListState.value.plus(response.recipes)
-//                response.recipes.forEach {
-//                    Timber.e("Found Recipe ${it.title}")
-//                }
                 _queryState.value =
                     QueryState(query, offset, number, response.totalResults)
             } catch (e: Exception) {

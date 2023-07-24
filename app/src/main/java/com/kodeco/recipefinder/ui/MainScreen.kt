@@ -12,6 +12,8 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.vectorResource
 import com.kodeco.recipefinder.LocalPrefsProvider
 import com.kodeco.recipefinder.R
+import com.kodeco.recipefinder.ui.groceries.GroceryList
+import com.kodeco.recipefinder.ui.recipes.RecipeList
 import com.kodeco.recipefinder.ui.widgets.BottomItem
 import com.kodeco.recipefinder.ui.widgets.CreateScaffold
 import com.kodeco.recipefinder.ui.widgets.IconInfo

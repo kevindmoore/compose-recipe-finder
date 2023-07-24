@@ -1,6 +1,5 @@
 package com.kodeco.recipefinder.network
 
-import com.squareup.moshi.Json
 
 data class SpoonacularRecipe (
     val id: Int = 0,
@@ -9,8 +8,7 @@ data class SpoonacularRecipe (
     val imageType: String = "",
     val summary: String = "",
     val instructions: String = "",
-    @Json(name = "sourceUrl")
-    val sourceURL: String = "",
+    val sourceUrl: String = "",
 
     val preparationMinutes: Int = 0,
     val cookingMinutes: Int = 0,

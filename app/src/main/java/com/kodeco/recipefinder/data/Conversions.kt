@@ -36,7 +36,7 @@ fun recipeToSpoonacularRecipe(
         servings = recipe.servings,
         summary = recipe.summary,
         instructions = recipe.instructions,
-        sourceURL = recipe.sourceURL,
+        sourceUrl = recipe.sourceUrl,
         readyInMinutes = recipe.readyInMinutes,
     )
 }
@@ -48,7 +48,7 @@ fun spoonacularRecipeToRecipe(recipe: SpoonacularRecipe): RecipeDb {
         image = recipe.image,
         summary = recipe.summary,
         instructions = recipe.instructions,
-        sourceURL = recipe.sourceURL,
+        sourceUrl = recipe.sourceUrl,
         preparationMinutes = recipe.preparationMinutes,
         cookingMinutes = recipe.cookingMinutes,
         readyInMinutes = recipe.readyInMinutes,

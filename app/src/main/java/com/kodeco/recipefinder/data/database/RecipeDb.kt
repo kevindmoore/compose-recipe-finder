@@ -20,8 +20,8 @@ data class RecipeDb(
     var summary: String = "",
     @ColumnInfo(name = "instructions")
     var instructions: String = "",
-    @ColumnInfo(name = "sourceURL")
-    var sourceURL: String = "",
+    @ColumnInfo(name = "sourceUrl")
+    var sourceUrl: String = "",
     @ColumnInfo(name = "preparationMinutes")
     var preparationMinutes: Int = 0,
     @ColumnInfo(name = "cookingMinutes")

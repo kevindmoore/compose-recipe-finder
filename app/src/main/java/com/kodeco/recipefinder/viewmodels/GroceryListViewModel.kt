@@ -14,6 +14,10 @@ data class GroceryUIState(
 )
 
 class GroceryListViewModel : ViewModel() {
+    private val _groceryUIState: MutableStateFlow<GroceryUIState> =
+        MutableStateFlow(GroceryUIState())
+    val groceryUIState = _groceryUIState.asStateFlow()
+
     fun setAllShowing(showing: Boolean) {
         _groceryUIState.value = _groceryUIState.value.copy(allListShowing = showing)
     }
@@ -42,7 +46,4 @@ class GroceryListViewModel : ViewModel() {
         _groceryUIState.value = _groceryUIState.value.copy(checkBoxes = updatedList)
     }
 
-    private val _groceryUIState: MutableStateFlow<GroceryUIState> =
-        MutableStateFlow<GroceryUIState>(GroceryUIState())
-    val groceryUIState = _groceryUIState.asStateFlow()
 }
